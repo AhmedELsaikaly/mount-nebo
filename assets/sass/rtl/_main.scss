@@ -1,0 +1,44 @@
+html[lang='ar'] {
+  body {
+    direction: rtl;
+  }
+  .side-menu {
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+  .nav-toggler {
+    svg {
+      transform: scale(-1, 1);
+    }
+  }
+  .event-ticket-time-wrap {
+    transform: translate(50%, 50%);
+  }
+  .mount-video-tab-video .icon-wrap button::after,
+  .mount-video-tab-video .icon-wrap button:before {
+    transform: translate(50%, -50%);
+  }
+  .mount-video-tab-video .icon-wrap svg {
+    margin-inline-start: 0;
+    margin-left: 10px;
+  }
+  .form-control.is-invalid,
+  .was-validated .form-control:invalid {
+    background-position: left calc(0.375em + 0.1875rem) center;
+  }
+  .form-control.is-invalid,
+  .was-validated .form-control:invalid {
+    background-position: top calc(0.375em + 0.1875rem) left
+      calc(0.375em + 0.1875rem);
+  }
+  .was-validated textarea.form-control:invalid,
+  textarea.form-control.is-invalid {
+  }
+}
+
+.swiper-rtl .swiper-button-next {
+  left: 0 !important;
+}
+.swiper-rtl .swiper-button-prev {
+  right: 0 !important;
+}

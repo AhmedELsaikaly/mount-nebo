@@ -1,0 +1,67 @@
+.footer {
+  background-color: $primary-color;
+  padding: 20px 0;
+  * {
+    color: $white-color;
+  }
+  &-logo {
+    width: 239px;
+    height: 87px;
+    overflow: hidden;
+    @include md {
+      width: 200px;
+      height: 61px;
+    }
+  }
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include md {
+      flex: 0 0 100%;
+      justify-content: center;
+    }
+  }
+  &-logo-links-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include md {
+      flex: 0 0 100%;
+      justify-content: space-between;
+    }
+    @include sm {
+      justify-content: center;
+    }
+  }
+  &-links {
+    @include sm {
+      flex: 0 0 100%;
+      text-align: center;
+      margin: 15px 0;
+    }
+    li {
+      display: inline-block;
+      a {
+        padding: 5px 15px;
+        font-family: $theme-font-1;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  &-social {
+    @include md {
+      margin: 15px 0;
+    }
+    svg {
+      &:not(.insta-icon) {
+        path {
+          fill: $white-color;
+        }
+      }
+    }
+  }
+}

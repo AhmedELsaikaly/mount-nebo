@@ -1,0 +1,271 @@
+.navbar {
+  flex-direction: column;
+  padding: 0;
+}
+.navbar-top-section {
+  padding: 15px 0;
+  border-bottom: 1px solid $grey-light-color;
+  align-self: stretch;
+  @include md {
+    padding: 10px 0;
+  }
+  @include xs {
+    padding: 5px 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.social-icons-wrap {
+  display: flex;
+  margin-inline-end: 10px;
+
+  path {
+    transition: all 0.3s ease-in-out;
+  }
+  a {
+    padding: 5px 10px;
+    &:hover {
+      path {
+        &:not(.not-hoverd-path) {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.plan-visit {
+  padding: 0 20px;
+  border: 1px solid $grey-light-color;
+  border-width: 0 1px;
+  gap: 0 16px;
+  @include lg {
+    display: none;
+  }
+  p {
+    .time-wrap {
+      margin-inline-start: 10px;
+    }
+  }
+}
+.get-direction {
+  @include xs {
+    display: none;
+  }
+  margin-inline-start: 15px;
+  gap: 8px;
+}
+.end-section-wrap {
+  gap: 30px;
+  .languages-wrap {
+    @include lg {
+      display: none;
+    }
+    li {
+      display: inline-block;
+      padding: 0px 15px;
+      cursor: pointer;
+      a {
+        color: $primary-color;
+        position: relative;
+        &:after {
+          content: '';
+          width: 0%;
+          height: 1px;
+          background-color: $secondary-color;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          transition: width 0.3s ease-in-out;
+        }
+      }
+      &:not(:last-child) {
+        border-inline-end: 1px solid $grey-light-color;
+      }
+      &:hover,
+      &.active {
+        a {
+          color: $secondary-color;
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    flex: 1;
+  }
+}
+
+.bottom-section-wrap {
+  padding: 10px 0 5px;
+  align-self: stretch;
+  transition: transform 0.3s ease-in-out;
+  background-color: $white-color;
+  .container {
+    flex-wrap: wrap;
+  }
+  &.sticky {
+    position: fixed;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    z-index: 999999;
+    box-shadow: 0px 6px 13px 0px rgba($color: $black-color, $alpha: 0.15);
+    animation-name: translateNav;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+  }
+  .navbar-nav {
+    @include md {
+      display: none;
+    }
+    li {
+      padding: 0 15px;
+      @include lg {
+        padding: 0 10px;
+      }
+      a {
+        color: $primary-color;
+        position: relative;
+        padding: 0 0 !important;
+        display: inline-block;
+        &:after {
+          content: '';
+          width: 0%;
+          height: 1px;
+          background-color: $secondary-color;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          transition: width 0.3s ease-in-out;
+        }
+        &.active {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+      &:first-child {
+        padding-inline-start: 0;
+      }
+      &:hover {
+        a {
+          color: $secondary-color;
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .navbar-brand-wrapper {
+    margin-inline-start: 40px;
+
+    .navbar-brand {
+      width: 223px;
+      height: 74px;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      display: block;
+    }
+    @include lg {
+      margin-inline-start: 20px;
+      .navbar-brand {
+        width: 187px;
+        height: 63px;
+      }
+    }
+    @include md {
+      margin-inline-start: 0;
+    }
+  }
+}
+
+.availableTimes-toggler-wrap {
+  gap: 30px;
+  button {
+    path {
+      transition: stroke 0.3s ease-in-out;
+    }
+    &:hover {
+      path {
+        stroke: $primary-color;
+      }
+    }
+  }
+}
+.available-time-wrap {
+  @include xs {
+    display: none;
+  }
+  .dropdown {
+    .dropdown-menu {
+      width: 100%;
+    }
+    &:hover {
+      .dropdown-menu {
+        display: block !important;
+      }
+    }
+  }
+  .dropdown-toggle {
+    padding: 8px;
+    padding-inline-end: 40px;
+    font-size: var(--font-size-14);
+    border-radius: 6px;
+    border: 1px solid $grey-light-color;
+    cursor: pointer;
+    background-size: 10px 10px;
+    position: relative;
+
+    &:after {
+      border: 0;
+      width: 10px;
+      height: 10px;
+      background-repeat: no-repeat;
+      top: 50%;
+      position: absolute;
+      inset-inline-end: 10px;
+      transform: translateY(-50%);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.414' height='5.207' viewBox='0 0 9.414 5.207'%3E%3Cpath id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' d='M9 13.5l4 4 4-4' transform='translate(-8.293 -12.793)' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+.lang-dropdown {
+  @media (min-width: 576px) and (max-width: 1199.9px) {
+    display: block;
+  }
+  display: none;
+  ​ .dropdown-menu {
+    min-width: 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0px 6px 13px 0px rgba($color: $black-color, $alpha: 0.15);
+    li {
+      &.active {
+        cursor: not-allowed;
+        pointer-events: none;
+        background-color: rgba($color: $secondary-color, $alpha: 0.4);
+        a {
+          color: $white-color;
+        }
+      }
+      &:hover,
+      &:focus {
+        a {
+          background-color: $secondary-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}

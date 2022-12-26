@@ -1,0 +1,57 @@
+/* ======= variables ======= */
+$theme-font: 'Muli';
+$theme-font-1: 'Times New Roman';
+/* ======= font-sizes ======= */
+:root {
+  --body-font-size: 16px;
+  --h1-font-size: 60px;
+  --h2-font-size: 50px;
+  --h3-font-size: 40px;
+  --h4-font-size: 28px;
+  --h5-font-size: 27px;
+  --h6-font-size: 24px;
+  --parag-font-size: 16px;
+  --btn-font-size: 16px;
+  --nav-links-font-size: 17px;
+  --font-size-14: 14px;
+  --font-size-18: 18px;
+  @include lg {
+    --h1-font-size: 50px;
+    --h2-font-size: 45px;
+  }
+  @include md {
+    --body-font-size: 14px;
+    --h1-font-size: 40px;
+    --h2-font-size: 35px;
+    --h3-font-size: 30px;
+    --h4-font-size: 22px;
+    --h5-font-size: 20px;
+    --h6-font-size: 18px;
+    --parag-font-size: 14px;
+    --btn-font-size: 16px;
+    --nav-links-font-size: 17px;
+    --font-size-14: 14px;
+    --font-size-18: 16px;
+  }
+}
+
+/* ======= colors======= */
+
+$white-color: #fff;
+$black-color: #000;
+$primary-color: #202124;
+$secondary-color: #c0200d;
+$grey-color: #4b4b4b;
+$grey-light-color: #ededed;
+
+// Font Weights
+$extra-light: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$extra-extra-bold: 900;
+// Transitions
+$half-second-transition: all 0.5s;

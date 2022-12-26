@@ -1,0 +1,50 @@
+.primary-btn {
+  display: inline-block;
+  background-color: $secondary-color;
+  font-size: var(--btn-font-size);
+  color: $white-color;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 70px 16px;
+  border-radius: 0px;
+  @include xs {
+    padding: 8px 40px 10px;
+  }
+  &.upper-case {
+    text-transform: uppercase;
+  }
+  &:hover {
+    color: $white-color;
+    background-color: $primary-color;
+  }
+  &.nav-btn {
+    border-radius: 5px;
+    padding: 8px 30px 10px;
+    @include lg {
+      padding: 5px 15px 5px;
+    }
+  }
+  &.custom-btn {
+    position: relative;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 2px solid transparent;
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -ms-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+    &:hover {
+      &:after {
+        top: 6px;
+        left: 6px;
+        border-color: $secondary-color;
+      }
+    }
+  }
+}
